@@ -6,6 +6,7 @@
 
 from flask import Flask, request
 from flask import __version__ as fv
+import sys
 
 app = Flask(__name__)
 
@@ -33,6 +34,17 @@ def version() -> str:
 
     """
     return "Flask Version is {}".format(fv)
+
+
+@app.route('/sys')
+def sys_version() -> str:
+    """
+        Args: expecting no arguments
+        Returns:
+            str: System Version
+
+    """
+    return f"System Version is {sys.version}"
 
 
 if __name__ == '__main__':
