@@ -1,0 +1,1 @@
+$ docker run -it --name jupyter-data1 -p 8888:8888 -v ${PWD}:/home/jovyan/work -e JUPYTER_ENABLE_LAB=yes jupyter/datascience-notebook
