@@ -1,7 +1,16 @@
 """
     Module Description
-    'Basic flask app' is a basic example of webserver
+   'Basic flask app' is a basic example of webserver
     which is a hello world function
+    Please try the docker image to run this code with this commands:
+    $ docker run -it --name myflask1 -p 5000:5000 -v ${PWD}:/app python:3.7 bash
+    in the docker bash then, first install the flask:
+    root@......:/# pip install flask:1.1.1
+    root@......:/# cd app
+    root@......:/# export FLASK_APP=Basic_Flask_App.py        # exporting to make them visible to flask command
+    root@......:/# export FLASK_DEBUG=1
+    root@......:/# flask run --host=0.0.0.0                   # There you go ...
+    root@......:/# exit                                       # Ctrl + c then type exit to leave the container
 """
 
 from flask import Flask, request
