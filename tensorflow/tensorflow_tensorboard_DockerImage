@@ -1,0 +1,1 @@
+$ docker run -it --name tf1 -p 8888:8888 -v ${pwd}:/tf/notebooks tensorflow/tensorflow:latest-py3-jupyter
