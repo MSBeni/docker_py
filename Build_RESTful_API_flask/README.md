@@ -1,5 +1,5 @@
 # Building a flask RESTful api using Docker Container
-- In this section you can build, run and test a flasjk REST aoi server container
+- In this section you can build, run and test a flask REST aoi server container
 Lecture Build & Run Flask REST API Server Container
 
 - Commands:
