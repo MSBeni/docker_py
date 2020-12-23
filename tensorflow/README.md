@@ -1,10 +1,23 @@
-# Follow the guideline to run thw docker based jupyter notebook
+# Follow the guideline to run tensorflow, tensorboard and pytorch docker based with jupyter notebook
+to install and run the tensorflow container
 ```bash
-$ docker run -it --name jupyter-data1 -p 8888:8888 -v ${PWD}:/home/jovyan/work -e JUPYTER_ENABLE_LAB=yes jupyter/datascience-notebook
+$ docker run -it --name tf1 -p 8888:8888 -v ${PWD}:/tf/notebooks tensorflow/tensorflow:latest-py3-jupyter
+```
+to install and run the tensorboard container
+```bash
+$ docker run -it -rm tf1 -p 6006:6006 -v ${PWD}:/logs:/tf/logs tensorflow/tensorflow tensorboard --bind_all --logdir /tf/logs
 ```
 
-- After first run and stopping the container:
-```bash
-$ docker start -ia jupyter-data1
-```
+- To install pytorch:
 
+1- run: 
+ ```bash
+ $ docker run -it --name torch1 -p 8888:8888 -v ${PWD}:/tf/notebooks tensorflow/tensorflow:latest-py3-jupyter
+ ``` 
+2- go to this website: https://pytorch.org/get-started/locally/
+    find the pip installation suitable for your system (pip install) like:
+     ```bash
+    $ pip install torch==1.7.1+cpu torchvision==0.8.2+cpu torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
+     ``` 
+ 
+ 3- Install the pytorch in juoyter terminal and there you go, you can go on and test the tensor_tutorial.ipynb file
