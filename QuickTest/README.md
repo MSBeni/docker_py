@@ -11,5 +11,5 @@ $ cd testsite/
 $ python manage.py runserver 0:8000
 ```
 
-
+# Follow the guideline to run docker based Flask simple application
 
