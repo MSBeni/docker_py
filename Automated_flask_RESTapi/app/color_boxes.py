@@ -96,7 +96,8 @@ def manage_box(color: str) -> Response:
 def store_balls(color: str, balls: int) -> Response:
     """
         Args:
-            str:color, int:balls - update numbers of balls in the box, if exists
+            color:str - color attribute of the box
+            balls:int - update numbers of balls in the box, if exists
         Returns:
             Response: HTTP status code 200 (OK) or 404 (box not found)
                       and text message confirming status of operation
