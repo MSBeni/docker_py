@@ -91,6 +91,7 @@ def manage_box(color: str) -> Response:
             status_code = 404  # Not found
     return APP.make_response((response, status_code, {'Content-Type': 'text/html'}))
 
+
 @APP.route('/box/<string:color>/<int:balls>', methods=['PUT'])
 def store_balls(color: str, balls: int) -> Response:
     """
