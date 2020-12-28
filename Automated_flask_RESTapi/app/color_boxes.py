@@ -68,8 +68,8 @@ def get_box(color: str) -> Response:
 def manage_box(color: str) -> Response:
     """
         Args:
-            str:color - color attribute of the box to manage
-            str:request.method - POST=create, DELETE=delete a box of given color
+            color:str - color attribute of the box to manage
+            request.method:str - POST=create, DELETE=delete a box of given color
 
         Returns:
             Response: HTTP status code 200 (OK), 400 (bad create) or 404 (bad delete) and
