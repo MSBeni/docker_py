@@ -27,7 +27,7 @@ def hello_world() -> Response:
             Response: HTTP 200 with greetings message
     """
     response = "Hello stranger!"
-    status_code = 200 # OK
+    status_code = 200  # OK
     return Response(response, status_code)
 
 
