@@ -104,11 +104,12 @@ def store_balls(color: str, balls: int) -> Response:
     """
     if db_update_box(color, balls):
         response = "<p>Box <b>{}</b> contains {} balls.<p>".format(color, balls)
-        status_code = 200 # OK
+        status_code = 200  # OK
     else:
         response = "<p>No box <b>{}</b>! Create it first</p>".format(color)
-        status_code = 404 # Not found
+        status_code = 404  # Not found
     return APP.make_response((response, status_code, {'Content-Type': 'text/html'}))
+
 
 if __name__ == '__main__':
     APP.run(debug=True, host='0.0.0.0')
