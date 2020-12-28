@@ -33,6 +33,7 @@ SESSION = SESSION_CLASS()
 
 BASE = declarative_base()
 
+
 class ColorBox(BASE):
     """
     Class definition to declare Database Table and its Columns.
