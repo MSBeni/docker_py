@@ -17,6 +17,7 @@ from Automated_flask_RESTapi.app.boxes_db import db_list_boxes, db_create_box, d
 
 APP = Flask(__name__)
 
+
 @APP.route('/')
 def hello_world() -> Response:
     """
@@ -28,6 +29,7 @@ def hello_world() -> Response:
     response = "Hello stranger!"
     status_code = 200 # OK
     return Response(response, status_code)
+
 
 @APP.route('/box', methods=['GET'])
 def list_boxes() -> Response:
