@@ -75,20 +75,20 @@ def manage_box(color: str) -> Response:
             Response: HTTP status code 200 (OK), 400 (bad create) or 404 (bad delete) and
                       text message confirming status of operation
     """
-    if request.method == 'POST': # Create new box
+    if request.method == 'POST':  # Create new box
         if db_create_box(color):
             response = "<p>Empty box <b>{}</b> created.</p>".format(color)
-            status_code = 200 # OK
+            status_code = 200  # OK
         else:
             response = "<p>Box <b>{}</b> already exists! Delete it first.</p>".format(color)
-            status_code = 400 # Bad request
-    elif request.method == 'DELETE': # Delete existing box
+            status_code = 400  # Bad request
+    elif request.method == 'DELETE':  # Delete existing box
         if db_delete_box(color):
             response = "<p>Box <b>{}</b> deleted.</p>".format(color)
-            status_code = 200 # OK
+            status_code = 200  # OK
         else:
             response = "<p>Cannot delete box <b>{}</b>! No such box.</p>".format(color)
-            status_code = 404 # Not found
+            status_code = 404  # Not found
     return APP.make_response((response, status_code, {'Content-Type': 'text/html'}))
 
 @APP.route('/box/<string:color>/<int:balls>', methods=['PUT'])
