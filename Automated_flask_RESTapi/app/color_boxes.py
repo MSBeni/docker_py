@@ -43,6 +43,7 @@ def list_boxes() -> Response:
     status_code = 200
     return APP.make_response((jsonify(response), status_code, {'Content-Type': 'application/json'}))
 
+
 @APP.route('/box/<string:color>', methods=['GET'])
 def get_box(color: str) -> Response:
     """
