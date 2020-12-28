@@ -109,6 +109,7 @@ def db_update_box(color: str, balls: int) -> bool:
         status = False
     return status
 
+
 def db_create_box(color: str) -> bool:
     """
     Create a new box with given color
@@ -127,6 +128,7 @@ def db_create_box(color: str) -> bool:
         SESSION.commit()
         status = True
     return status
+
 
 def db_delete_box(color: str) -> bool:
     """
