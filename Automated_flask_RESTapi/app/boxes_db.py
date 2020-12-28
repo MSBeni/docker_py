@@ -49,11 +49,12 @@ class ColorBox(BASE):
     color = Column(String(50))
     balls = Column(Integer)
 
+
 # Intialize (create or open) Database
 BASE.metadata.create_all(ENGINE)
 
-# Module functions
 
+# Module functions
 def db_list_boxes() -> Dict[str, int]:
     """
     Lists boxes existing in Database
