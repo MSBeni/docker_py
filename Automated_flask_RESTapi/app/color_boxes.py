@@ -63,6 +63,7 @@ def get_box(color: str) -> Response:
         status_code = 404  # Not found
     return APP.make_response((jsonify(response), status_code, {'Content-Type': 'application/json'}))
 
+
 @APP.route('/box/<string:color>', methods=['POST', 'DELETE'])
 def manage_box(color: str) -> Response:
     """
