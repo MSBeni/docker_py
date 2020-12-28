@@ -57,10 +57,10 @@ def get_box(color: str) -> Response:
     exists, balls = db_get_box(color)
     if exists:
         response = {color: balls}
-        status_code = 200 # OK
+        status_code = 200  # OK
     else:
         response = {}
-        status_code = 404 # Not found
+        status_code = 404  # Not found
     return APP.make_response((jsonify(response), status_code, {'Content-Type': 'application/json'}))
 
 @APP.route('/box/<string:color>', methods=['POST', 'DELETE'])
