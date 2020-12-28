@@ -48,7 +48,7 @@ def list_boxes() -> Response:
 def get_box(color: str) -> Response:
     """
         Args:
-            str:color - color attribute of box to get
+            color:str - color attribute of box to get
 
         Returns:
             Response: HTTP status code 200 (OK) or 404 (not found) and
@@ -56,7 +56,7 @@ def get_box(color: str) -> Response:
     """
     exists, balls = db_get_box(color)
     if exists:
-        response = { color : balls }
+        response = {color: balls}
         status_code = 200 # OK
     else:
         response = {}
