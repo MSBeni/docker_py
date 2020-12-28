@@ -13,7 +13,7 @@
 """
 
 from flask import Flask, request, Response, jsonify
-from boxes_db import db_list_boxes, db_create_box, db_get_box, db_update_box, db_delete_box
+from Automated_flask_RESTapi.app.boxes_db import db_list_boxes, db_create_box, db_get_box, db_update_box, db_delete_box
 
 APP = Flask(__name__)
 
