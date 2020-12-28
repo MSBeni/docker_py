@@ -69,6 +69,7 @@ def db_list_boxes() -> Dict[str, int]:
         boxes[row.color] = row.balls
     return boxes
 
+
 def db_get_box(color: str) -> (bool, int):
     """
     Get number of balls in a box
@@ -87,6 +88,7 @@ def db_get_box(color: str) -> (bool, int):
         balls = 0
         status = False
     return status, balls
+
 
 def db_update_box(color: str, balls: int) -> bool:
     """
