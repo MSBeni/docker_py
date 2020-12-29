@@ -31,3 +31,7 @@ Then specify a volume to set database to store app data:
 ```bash
 $ docker volume create cb_data
 ```
+Then run the container using this command:
+```bash
+$ docker run -d --name cb -v cb_data:/data -p 5000:5000 cb:prod
+```
