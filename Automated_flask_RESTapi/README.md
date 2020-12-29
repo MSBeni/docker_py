@@ -21,3 +21,9 @@ $ docker run --rm cb:from cat /tmp/base_img
 ```bash
 $ docker run --rm -p 5000:5000 cb:from
 ```
+
+You can also test other Dockerfiels indicating other similar approaches. Finally, the final complete Dockerfile will be run.
+Run this command to build the container: :
+```bash
+$ docker build -t cb:prod production.Dockerfile .
+```
