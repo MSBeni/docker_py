@@ -35,3 +35,8 @@ Then run the container using this command:
 ```bash
 $ docker run -d --name cb -v cb_data:/data -p 5000:5000 cb:prod
 ```
+Check the running containers simply by the command:
+```bash
+$ docker ps
+```
+You can use the Postman, Talend API or similar application to test this RESTful API. 
