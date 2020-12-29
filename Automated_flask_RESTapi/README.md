@@ -27,3 +27,7 @@ Run this command to build the container:
 ```bash
 $ docker build -t cb:prod -f production.Dockerfile .
 ```
+Then specify a volume to store the app data:
+```bash
+$ docker volume create cb_data
+```
