@@ -40,3 +40,4 @@ Check the running containers simply by the command:
 $ docker ps
 ```
 You can use the Postman, Talend API or similar application to test this RESTful API. 
+In this api, the database is safely stored in persistant volume, and after removing the docker container the api data will remain. Just try this step and check the api.
