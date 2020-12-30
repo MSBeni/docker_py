@@ -1,4 +1,4 @@
-version: "3.7" # Mandatory line in Docker Compose File
+version: "3.3" # Mandatory line in Docker Compose File
 
 services: # Declaration of Containers (here named Sevices) to run
 
