@@ -40,4 +40,18 @@ Check the running containers simply by the command:
 $ docker ps
 ```
 You can use the Postman, Talend API or similar application to test this RESTful API. 
-In this api, the database is safely stored in persistant volume, and after removing the docker container the api data will remain. Just try this step and check the api.
+In this api, the database is safely stored in persistent volume, and after removing the docker container the api data will remain. Just try this step and check the api.
+
+After loging to your docker hub account by this command:
+```bash
+$ docker login
+```
+you can tag this image and push it to your docker hub:
+Renaming and Tagging:
+```bash
+$ docker tag cb:prod msbeni/flaskrest:0.1
+```
+Pushing to docker hub:
+```bash
+$ docker push msbeni/flaskrest:0.1
+```
