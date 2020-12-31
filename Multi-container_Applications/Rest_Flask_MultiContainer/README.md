@@ -40,6 +40,14 @@ and check its logs:
 ```bash
 $ docker-compose logs cb
 ```
+and finally launch the final service:
+```bash
+$ docker-compose up -d phpmyadmin
+```
+You can check the phpmyadmin by checking you localhost (http://localhost:8080/) using the defined user and password in service db.
+
+
+
 
 
 
