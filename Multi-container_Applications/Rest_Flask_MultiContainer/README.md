@@ -19,6 +19,10 @@ $ docker-compose logs
 ```
 After about 20 seconds you are good to go and check the api by testing it on the local host port 5000.
 Use the Talend API tester or Postman to do so, and ingest some data into your database.
-
+You can always run the services separately to prevent the startup errors.
+To do so, please first stop all the services without removing the volumes. To do this please run:
+```bash
+$ docker-compose down
+```
 
 
