@@ -14,5 +14,8 @@ $ docker-compose up -d
 ```
 As we are using the mariadb and it make the connection with the mysql in the other service and mariadb taked 20 to 30 seconds to setup, probabely you can see some errors by checking the logs.
 to check the logs run this command:
+```bash
+$ docker-compose logs
+```
 
 
