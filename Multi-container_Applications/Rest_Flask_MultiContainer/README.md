@@ -46,7 +46,10 @@ $ docker-compose up -d phpmyadmin
 ```
 You can check the phpmyadmin by checking you localhost (http://localhost:8080/) using the defined user and password in service db.
 
-
+do not forget to stop the services when you're done testing the api.
+```bash
+$ docker-compose down -v
+```
 
 
 
