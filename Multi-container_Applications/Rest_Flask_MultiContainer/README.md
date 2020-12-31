@@ -32,5 +32,14 @@ and check its logs:
 ```bash
 $ docker-compose logs db
 ```
+Then launch the cb service separately:
+```bash
+$ docker-compose up -d cb
+```
+and check its logs:
+```bash
+$ docker-compose logs cb
+```
+
 
 
