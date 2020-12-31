@@ -24,5 +24,13 @@ To do so, please first stop all the services without removing the volumes. To do
 ```bash
 $ docker-compose down
 ```
+Then run the services separately:
+```bash
+$ docker-compose up -d db
+```
+and check its logs:
+```bash
+$ docker-compose logs db
+```
 
 
