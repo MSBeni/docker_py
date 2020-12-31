@@ -17,5 +17,8 @@ to check the logs run this command:
 ```bash
 $ docker-compose logs
 ```
+After about 20 seconds you are good to go and check the api by testing it on the local host port 5000.
+Use the Talend API tester or Postman to do so, and ingest some data into your database.
+
 
 
